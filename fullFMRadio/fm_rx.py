@@ -39,8 +39,8 @@ class fm_rx(gr.top_block):
 		self.connect(self.rational_resampler, self.wbfm_rcv)
 		
 		## Connection setup number 2 (with filter)
-		self.connect(self.rational_resampler, self.filter)
-		self.connect(self.filter, self.wbfm_rcv)
+		#self.connect(self.rational_resampler, self.filter)
+		#self.connect(self.filter, self.wbfm_rcv)
 
 
 if __name__ == '__main__':
