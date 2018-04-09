@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sun Apr  8 18:11:31 2018
+# Generated: Sun Apr  8 19:44:36 2018
 ##################################################
 
 if __name__ == '__main__':
@@ -68,7 +68,7 @@ class top_block(grc_wxgui.top_block_gui):
         	1, samp_rate, 73E3, 25E3, firdes.WIN_HAMMING, 6.76))
         self.audio_sink_0 = audio.sink(48000, "", False)
         self.analog_wfm_rcv_0 = analog.wfm_rcv(
-        	quad_rate=48000,
+        	quad_rate=480000,
         	audio_decimation=10,
         )
 
