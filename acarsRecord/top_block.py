@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sun Apr 15 13:31:30 2018
+# Generated: Mon Apr 16 15:03:02 2018
 ##################################################
 
 if __name__ == '__main__':
@@ -72,7 +72,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.rtlsdr_source_0.set_freq_corr(50, 0)
         self.rtlsdr_source_0.set_dc_offset_mode(2, 0)
         self.rtlsdr_source_0.set_iq_balance_mode(2, 0)
-        self.rtlsdr_source_0.set_gain_mode(True, 0)
+        self.rtlsdr_source_0.set_gain_mode(False, 0)
         self.rtlsdr_source_0.set_gain(50, 0)
         self.rtlsdr_source_0.set_if_gain(20, 0)
         self.rtlsdr_source_0.set_bb_gain(20, 0)
@@ -169,11 +169,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._qtgui_freq_sink_x_1_win)
         self.low_pass_filter_0 = filter.fir_filter_ccf(10, firdes.low_pass(
         	1, samp_rate, 3E3, 25E3, firdes.WIN_HAMMING, 6.76))
-        self.blocks_wavfile_sink_0_0 = blocks.wavfile_sink("/home/chris/Desktop/filteredAcarsNew", 1, 48000, 8)
+        self.blocks_wavfile_sink_0_0 = blocks.wavfile_sink("/home/c/Desktop/acarsNew.wav", 1, 48000, 8)
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.audio_sink_1 = audio.sink(48000, "", True)
-        self.analog_simple_squelch_cc_1 = analog.simple_squelch_cc(-25, 0.001)
-        self.analog_rail_ff_0 = analog.rail_ff(0, 1)
+        self.analog_rail_ff_0 = analog.rail_ff(-0.9, 0.9)
 
         ##################################################
         # Connections
@@ -181,11 +180,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.analog_rail_ff_0, 0), (self.audio_sink_1, 0))    
         self.connect((self.analog_rail_ff_0, 0), (self.blocks_wavfile_sink_0_0, 0))    
         self.connect((self.analog_rail_ff_0, 0), (self.qtgui_freq_sink_x_1, 0))    
-        self.connect((self.analog_simple_squelch_cc_1, 0), (self.blocks_complex_to_mag_0, 0))    
         self.connect((self.blocks_complex_to_mag_0, 0), (self.rational_resampler_xxx_1, 0))    
         self.connect((self.low_pass_filter_0, 0), (self.qtgui_waterfall_sink_x_0, 0))    
         self.connect((self.low_pass_filter_0, 0), (self.rational_resampler_xxx_0, 0))    
-        self.connect((self.rational_resampler_xxx_0, 0), (self.analog_simple_squelch_cc_1, 0))    
+        self.connect((self.rational_resampler_xxx_0, 0), (self.blocks_complex_to_mag_0, 0))    
         self.connect((self.rational_resampler_xxx_1, 0), (self.analog_rail_ff_0, 0))    
         self.connect((self.rtlsdr_source_0, 0), (self.low_pass_filter_0, 0))    
 
@@ -202,8 +200,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.low_pass_filter_0.set_taps(firdes.low_pass(1, self.samp_rate, 3E3, 25E3, firdes.WIN_HAMMING, 6.76))
         self.qtgui_freq_sink_x_1.set_frequency_range(0, self.samp_rate)
-        self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
         self.qtgui_waterfall_sink_x_0.set_frequency_range(0, self.samp_rate)
+        self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
 
 
 def main(top_block_cls=top_block, options=None):
