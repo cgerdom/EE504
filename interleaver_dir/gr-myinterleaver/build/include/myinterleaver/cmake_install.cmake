@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/myinterleaver" TYPE FILE FILES
     "/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/include/myinterleaver/api.h"
     "/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/include/myinterleaver/interleaver.h"
+    "/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/include/myinterleaver/deinterleaver.h"
     )
 endif()
 

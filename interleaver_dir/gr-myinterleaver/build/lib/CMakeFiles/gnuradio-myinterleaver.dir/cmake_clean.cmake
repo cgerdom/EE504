@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gnuradio-myinterleaver.dir/interleaver_impl.cc.o"
+  "CMakeFiles/gnuradio-myinterleaver.dir/deinterleaver_impl.cc.o"
   "libgnuradio-myinterleaver.pdb"
   "libgnuradio-myinterleaver.so"
 )

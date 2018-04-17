@@ -64,17 +64,17 @@ namespace gr {
                        gr_vector_void_star &output_items)
     {
       const int *in = (const int *) input_items[0];
-      const int *out1 = (const int *) output_items[0];
-      const int *out2 = (const int *) output_items[1];
+      int *out1 = (int *) output_items[0];
+      int *out2 = (int *) output_items[1];
 
-      for (int i=0; i < noutput_items, i += 2) {
-        out1[i/2] = in[i]
+      for (int i=0; i < noutput_items; i += 2) {
+        out1[i/2] = in[i];
         if (i+1 < noutput_items) {
-          out2[i/2] = in[i+1]
+          out2[i/2] = in[i+1];
         }
       }
 
-      consume_each(0, noutput_items*2);
+      consume_each(noutput_items*2);
       return noutput_items;
     }
 

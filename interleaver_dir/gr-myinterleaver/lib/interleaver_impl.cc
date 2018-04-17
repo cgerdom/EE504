@@ -66,12 +66,12 @@ namespace gr {
     {
       const int *in1 = (const int *) input_items[0];
       const int *in2 = (const int *) input_items[1];
-      const int *out = (const int *) output_items[0];
+      int *out = (int *) output_items[0];
 
-      for (int i=0; i < noutput_items, i += 2) {
-        out[i] = in1[i/2]
+      for (int i=0; i < noutput_items; i += 2) {
+        out[i] = in1[i/2];
         if (i+1 < noutput_items) {
-          out[i+1] = in2[i/2]
+          out[i+1] = in2[i/2];
         }
       }
 

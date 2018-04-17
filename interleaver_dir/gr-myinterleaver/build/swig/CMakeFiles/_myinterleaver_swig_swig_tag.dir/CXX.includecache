@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/_myinterleaver_swig_swig_tag.cpp
+

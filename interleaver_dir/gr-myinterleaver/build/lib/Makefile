@@ -195,6 +195,33 @@ test-myinterleaver/fast:
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/test-myinterleaver.dir/build.make lib/CMakeFiles/test-myinterleaver.dir/build
 .PHONY : test-myinterleaver/fast
 
+deinterleaver_impl.o: deinterleaver_impl.cc.o
+
+.PHONY : deinterleaver_impl.o
+
+# target to build an object file
+deinterleaver_impl.cc.o:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/gnuradio-myinterleaver.dir/build.make lib/CMakeFiles/gnuradio-myinterleaver.dir/deinterleaver_impl.cc.o
+.PHONY : deinterleaver_impl.cc.o
+
+deinterleaver_impl.i: deinterleaver_impl.cc.i
+
+.PHONY : deinterleaver_impl.i
+
+# target to preprocess a source file
+deinterleaver_impl.cc.i:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/gnuradio-myinterleaver.dir/build.make lib/CMakeFiles/gnuradio-myinterleaver.dir/deinterleaver_impl.cc.i
+.PHONY : deinterleaver_impl.cc.i
+
+deinterleaver_impl.s: deinterleaver_impl.cc.s
+
+.PHONY : deinterleaver_impl.s
+
+# target to generate assembly for a file
+deinterleaver_impl.cc.s:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/gnuradio-myinterleaver.dir/build.make lib/CMakeFiles/gnuradio-myinterleaver.dir/deinterleaver_impl.cc.s
+.PHONY : deinterleaver_impl.cc.s
+
 interleaver_impl.o: interleaver_impl.cc.o
 
 .PHONY : interleaver_impl.o
@@ -221,6 +248,33 @@ interleaver_impl.s: interleaver_impl.cc.s
 interleaver_impl.cc.s:
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/gnuradio-myinterleaver.dir/build.make lib/CMakeFiles/gnuradio-myinterleaver.dir/interleaver_impl.cc.s
 .PHONY : interleaver_impl.cc.s
+
+qa_deinterleaver.o: qa_deinterleaver.cc.o
+
+.PHONY : qa_deinterleaver.o
+
+# target to build an object file
+qa_deinterleaver.cc.o:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/test-myinterleaver.dir/build.make lib/CMakeFiles/test-myinterleaver.dir/qa_deinterleaver.cc.o
+.PHONY : qa_deinterleaver.cc.o
+
+qa_deinterleaver.i: qa_deinterleaver.cc.i
+
+.PHONY : qa_deinterleaver.i
+
+# target to preprocess a source file
+qa_deinterleaver.cc.i:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/test-myinterleaver.dir/build.make lib/CMakeFiles/test-myinterleaver.dir/qa_deinterleaver.cc.i
+.PHONY : qa_deinterleaver.cc.i
+
+qa_deinterleaver.s: qa_deinterleaver.cc.s
+
+.PHONY : qa_deinterleaver.s
+
+# target to generate assembly for a file
+qa_deinterleaver.cc.s:
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(MAKE) -f lib/CMakeFiles/test-myinterleaver.dir/build.make lib/CMakeFiles/test-myinterleaver.dir/qa_deinterleaver.cc.s
+.PHONY : qa_deinterleaver.cc.s
 
 qa_myinterleaver.o: qa_myinterleaver.cc.o
 
@@ -291,9 +345,15 @@ help:
 	@echo "... test-myinterleaver"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... deinterleaver_impl.o"
+	@echo "... deinterleaver_impl.i"
+	@echo "... deinterleaver_impl.s"
 	@echo "... interleaver_impl.o"
 	@echo "... interleaver_impl.i"
 	@echo "... interleaver_impl.s"
+	@echo "... qa_deinterleaver.o"
+	@echo "... qa_deinterleaver.i"
+	@echo "... qa_deinterleaver.s"
 	@echo "... qa_myinterleaver.o"
 	@echo "... qa_myinterleaver.i"
 	@echo "... qa_myinterleaver.s"

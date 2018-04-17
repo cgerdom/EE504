@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="classgr_1_1myinterleaver_1_1deinterleaver" kind="class"><name>gr::myinterleaver::deinterleaver</name>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver_1ac1a4e9d1a369cc911a568add0ae3911a" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver_1a15e05db72633df56da53befb455ece5a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1myinterleaver_1_1deinterleaver__impl" kind="class"><name>gr::myinterleaver::deinterleaver_impl</name>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver__impl_1abafc0adb8844fc034cfb172fd9c85567" kind="function"><name>deinterleaver_impl</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver__impl_1a095fd423f4e8ec5270c16af461984a15" kind="function"><name>~deinterleaver_impl</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver__impl_1ab35ec1b67e8e312e2a94e2555eebcd67" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1deinterleaver__impl_1a306733dbe0177c5d2bc6cd815990110f" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1myinterleaver_1_1interleaver" kind="class"><name>gr::myinterleaver::interleaver</name>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver_1a6e8da8db22e3526103778d1a56201c03" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver_1aae8e830ce7928a507d34347ae78b770a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1myinterleaver_1_1interleaver__impl" kind="class"><name>gr::myinterleaver::interleaver_impl</name>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver__impl_1ac9dbaa51ea89ac01fbbbef1db9a41326" kind="function"><name>interleaver_impl</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver__impl_1a397f4a8788f528e8175fa97b38a5b4fb" kind="function"><name>~interleaver_impl</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver__impl_1ae2b3ad2cddf2b1c1ba37b618c094176b" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1myinterleaver_1_1interleaver__impl_1ad9006fd4c6ce539d7260232c01e8c1e2" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1myinterleaver" kind="namespace"><name>gr::myinterleaver</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1ad49e5f457d74e86629e734bfc5486c46" kind="define"><name>MYINTERLEAVER_API</name></member>
+  </compound>
+  <compound refid="deinterleaver_8h" kind="file"><name>deinterleaver.h</name>
+  </compound>
+  <compound refid="deinterleaver__impl_8h" kind="file"><name>deinterleaver_impl.h</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="interleaver_8h" kind="file"><name>interleaver.h</name>
+  </compound>
+  <compound refid="interleaver__impl_8h" kind="file"><name>interleaver_impl.h</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_52cbc7956e01951fc0873c3070df8798" kind="dir"><name>myinterleaver</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
