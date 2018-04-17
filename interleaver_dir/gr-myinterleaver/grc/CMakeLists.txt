@@ -18,5 +18,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    myinterleaver_interleaver.xml DESTINATION share/gnuradio/grc/blocks
+    myinterleaver_interleaver.xml
+    myinterleaver_deinterleaver.xml DESTINATION share/gnuradio/grc/blocks
 )
