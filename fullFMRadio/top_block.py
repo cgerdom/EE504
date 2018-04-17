@@ -28,7 +28,7 @@ from optparse import OptionParser
 import osmosdr
 import time
 import wx
-
+from sys import argv 
 
 class top_block(grc_wxgui.top_block_gui):
 
@@ -41,13 +41,13 @@ class top_block(grc_wxgui.top_block_gui):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 2E6
-
+        self.centerfreq = int(station*1000000)
         ##################################################
         # Blocks
         ##################################################
         self.rtlsdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
         self.rtlsdr_source_0.set_sample_rate(samp_rate)
-        self.rtlsdr_source_0.set_center_freq(station*1e6, 0)
+        self.rtlsdr_source_0.set_center_freq(self.centerfreq, 0)
         self.rtlsdr_source_0.set_freq_corr(0, 0)
         self.rtlsdr_source_0.set_dc_offset_mode(0, 0)
         self.rtlsdr_source_0.set_iq_balance_mode(0, 0)
@@ -98,4 +98,4 @@ def main(station, top_block_cls=top_block, options=None):
 
 if __name__ == '__main__':
     station = argv[1]
-    main(station)
+    main(float(station))
