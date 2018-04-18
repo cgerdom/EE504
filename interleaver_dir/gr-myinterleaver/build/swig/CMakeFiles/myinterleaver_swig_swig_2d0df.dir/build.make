@@ -77,6 +77,7 @@ swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/basic_block.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/runtime_swig_doc.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/sync_interpolator.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/gr_ctrlport.i
+swig/myinterleaver_swig_swig_2d0df.cpp: swig/myinterleaver_swig_doc.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/feval.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/gr_shared_ptr.i
 swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/prefs.i
@@ -91,14 +92,23 @@ swig/myinterleaver_swig_swig_2d0df.cpp: /usr/include/gnuradio/swig/block_detail.
 swig/myinterleaver_swig_swig_2d0df.cpp: swig/myinterleaver_swig.tag
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && /usr/bin/cmake -E copy /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_swig_2d0df.cpp.in /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_swig_2d0df.cpp
 
+swig/myinterleaver_swig_doc.i: swig/myinterleaver_swig_doc_swig_docs/xml/index.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating python docstrings for myinterleaver_swig_doc"
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/docs/doxygen && /usr/bin/python2 -B /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/docs/doxygen/swig_doc.py /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_doc_swig_docs/xml /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_doc.i
+
 swig/myinterleaver_swig.tag: swig/_myinterleaver_swig_swig_tag
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating myinterleaver_swig.tag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating myinterleaver_swig.tag"
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && ./_myinterleaver_swig_swig_tag
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && /usr/bin/cmake -E touch /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig.tag
 
+swig/myinterleaver_swig_doc_swig_docs/xml/index.xml: swig/_myinterleaver_swig_doc_tag
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating doxygen xml for myinterleaver_swig_doc docs"
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && ./_myinterleaver_swig_doc_tag
+	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && /usr/bin/doxygen /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_doc_swig_docs/Doxyfile
+
 swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o: swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/flags.make
 swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o: swig/myinterleaver_swig_swig_2d0df.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o"
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o -c /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/myinterleaver_swig_swig_2d0df.cpp
 
 swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.i: cmake_force
@@ -130,7 +140,7 @@ myinterleaver_swig_swig_2d0df_EXTERNAL_OBJECTS =
 swig/myinterleaver_swig_swig_2d0df: swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/myinterleaver_swig_swig_2d0df.cpp.o
 swig/myinterleaver_swig_swig_2d0df: swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/build.make
 swig/myinterleaver_swig_swig_2d0df: swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable myinterleaver_swig_swig_2d0df"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable myinterleaver_swig_swig_2d0df"
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myinterleaver_swig_swig_2d0df.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Swig source"
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig && /usr/bin/cmake -E make_directory /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig
@@ -150,7 +160,9 @@ swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/clean:
 .PHONY : swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/clean
 
 swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/depend: swig/myinterleaver_swig_swig_2d0df.cpp
+swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/depend: swig/myinterleaver_swig_doc.i
 swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/depend: swig/myinterleaver_swig.tag
+swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/depend: swig/myinterleaver_swig_doc_swig_docs/xml/index.xml
 	cd /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/swig /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig /home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/build/swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : swig/CMakeFiles/myinterleaver_swig_swig_2d0df.dir/depend
 

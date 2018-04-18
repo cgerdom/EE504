@@ -55,7 +55,8 @@ namespace gr {
     interleaver_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-      ninput_items_required[0] = noutput_items/2;
+      	ninput_items_required[1] = noutput_items/2;
+	ninput_items_required[0] = noutput_items/2;
     }
 
     int

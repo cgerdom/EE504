@@ -35,12 +35,10 @@ class qa_interleaver (gr_unittest.TestCase):
 		src_data1 = (1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)
 		src_data2 = (8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0)
 		expected_result = (1.0, 8.0, 2.0, 9.0, 3.0, 10.0, 4.0, 11.0, 5.0, 12.0, 6.0, 13.0, 7.0, 14.0)
-
 		src1 = blocks.vector_source_f(src_data1)
 		src2 = blocks.vector_source_f(src_data2)
 		inter = myinterleaver.interleaver()
 		dst = blocks.vector_sink_f()
-
 		self.tb.connect(src1, (inter, 0))
 		self.tb.connect(src2, (inter, 1))
 		self.tb.connect(inter, dst)
@@ -48,7 +46,6 @@ class qa_interleaver (gr_unittest.TestCase):
 
 		result_data = dst.data()
 		self.assertEqual(expected_result, result_data)
-		print result_data
 		"""
 		src1 = blocks.vector_source_f(src_data1)
 		src2 = blocks.vector_source_f(src_data2)
