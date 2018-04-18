@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Mon Apr 16 15:03:02 2018
+# Generated: Mon Apr 16 18:09:34 2018
 ##################################################
 
 if __name__ == '__main__':
@@ -172,6 +172,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_wavfile_sink_0_0 = blocks.wavfile_sink("/home/c/Desktop/acarsNew.wav", 1, 48000, 8)
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.audio_sink_1 = audio.sink(48000, "", True)
+        self.analog_simple_squelch_cc_0 = analog.simple_squelch_cc(-25, 0.001)
         self.analog_rail_ff_0 = analog.rail_ff(-0.9, 0.9)
 
         ##################################################
@@ -180,10 +181,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.analog_rail_ff_0, 0), (self.audio_sink_1, 0))    
         self.connect((self.analog_rail_ff_0, 0), (self.blocks_wavfile_sink_0_0, 0))    
         self.connect((self.analog_rail_ff_0, 0), (self.qtgui_freq_sink_x_1, 0))    
+        self.connect((self.analog_simple_squelch_cc_0, 0), (self.blocks_complex_to_mag_0, 0))    
         self.connect((self.blocks_complex_to_mag_0, 0), (self.rational_resampler_xxx_1, 0))    
         self.connect((self.low_pass_filter_0, 0), (self.qtgui_waterfall_sink_x_0, 0))    
         self.connect((self.low_pass_filter_0, 0), (self.rational_resampler_xxx_0, 0))    
-        self.connect((self.rational_resampler_xxx_0, 0), (self.blocks_complex_to_mag_0, 0))    
+        self.connect((self.rational_resampler_xxx_0, 0), (self.analog_simple_squelch_cc_0, 0))    
         self.connect((self.rational_resampler_xxx_1, 0), (self.analog_rail_ff_0, 0))    
         self.connect((self.rtlsdr_source_0, 0), (self.low_pass_filter_0, 0))    
 

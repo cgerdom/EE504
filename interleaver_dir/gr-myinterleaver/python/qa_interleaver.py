@@ -35,7 +35,6 @@ class qa_interleaver (gr_unittest.TestCase):
 		src_data1 = (1, 2, 3, 4, 5, 6, 7)
 		src_data2 = (8, 9, 10, 11, 12, 13, 14)
 		expected_result = (1, 8, 2, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 14)
-		print_src_list(src_data)
 
 		src1 = blocks.vector_source_f(src_data1)
 		src2 = blocks.vector_source_f(src_data2)
@@ -48,7 +47,6 @@ class qa_interleaver (gr_unittest.TestCase):
 		self.tb.run()
 
 		result_data = dst.data()
-		print_result_list(result_data)
 		self.assertEqual(expected_result, result_data)
 
 		src1 = blocks.vector_source_f(src_data1)
