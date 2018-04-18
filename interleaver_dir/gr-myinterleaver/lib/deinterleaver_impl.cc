@@ -40,8 +40,8 @@ namespace gr {
      */
     deinterleaver_impl::deinterleaver_impl()
       : gr::block("deinterleaver",
-              gr::io_signature::make(<+MIN_IN+>, <+MAX_IN+>, sizeof(<+ITYPE+>)),
-              gr::io_signature::make(<+MIN_OUT+>, <+MAX_OUT+>, sizeof(<+OTYPE+>)))
+              gr::io_signature::make(1, 1, sizeof(int)),
+              gr::io_signature::make(2, 2, sizeof(int)))
     {}
 
     /*
@@ -54,7 +54,7 @@ namespace gr {
     void
     deinterleaver_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
-      /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
+      ninput_items_required[0] = noutput_items*2;
     }
 
     int
@@ -63,15 +63,18 @@ namespace gr {
                        gr_vector_const_void_star &input_items,
                        gr_vector_void_star &output_items)
     {
-      const <+ITYPE+> *in = (const <+ITYPE+> *) input_items[0];
-      <+OTYPE+> *out = (<+OTYPE+> *) output_items[0];
+      const int *in = (const int *) input_items[0];
+      const int *out1 = (const int *) output_items[0];
+      const int *out2 = (const int *) output_items[1];
 
-      // Do <+signal processing+>
-      // Tell runtime system how many input items we consumed on
-      // each input stream.
-      consume_each (noutput_items);
+      for (int i=0; i < noutput_items, i += 2) {
+        out1[i/2] = in[i]
+        if (i+1 < noutput_items) {
+          out2[i/2] = in[i+1]
+        }
+      }
 
-      // Tell runtime system how many output items we produced.
+      consume_each(0, noutput_items*2);
       return noutput_items;
     }
 
