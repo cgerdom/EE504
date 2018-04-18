@@ -1,8 +1,7 @@
 from pydub import AudioSegment
-from typing import List, Any, Union
 
 
-def remove_silence(sound, silence_threshold=-30.0, chunk_size=10):
+def remove_silence(sound, silence_threshold=-20.0, chunk_size=100):
     '''
     :param sound:
     :param silence_threshold: in dB
@@ -15,18 +14,23 @@ def remove_silence(sound, silence_threshold=-30.0, chunk_size=10):
 
     assert chunk_size > 0
     index = 0
-    short_sound = AudioSegment.empty()  # type: List[Union[int, Any]]
+    short_sound = AudioSegment.empty()
     while (index + chunk_size) < len(sound):
-        index += chunk_size
 
-        if sound[index:index + chunk_size].dBFS > silence_threshold:
-            short_sound.extend(sound[index:index + chunk_size])
+        if sound[index:(index + chunk_size)].dBFS > 6.03:  # silence_threshold based on observed wav file silence
+            short_sound = short_sound.append(sound[index:(index + chunk_size)], crossfade=0)
+            #short_sound = short_sound.append(AudioSegment.silent(duration=1000), crossfade=0)
+
+        index += chunk_size
+        print('working on chunk ' + repr(index) + ' of ' +repr(len(sound)) + ' ms')
 
     return short_sound
 
 
-soundin = AudioSegment.from_file("~/Desktop/acarsTest.wav", format="wav")
+sound_in = AudioSegment.from_file("acarsTest.wav", format="wav")
 
-new_sound = remove_silence(soundin)
+new_sound = remove_silence(sound_in)
 
-file_handle = new_sound.export("~/Desktop/acarsShort.wav", format="wav")
+file_handle = new_sound.export("acarsShort.wav", format="wav")
+
+file_handle2 = sound_in.export("test.wav", format="wav")

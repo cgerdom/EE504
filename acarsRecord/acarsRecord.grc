@@ -136,7 +136,7 @@
     </param>
     <param>
       <key>hi</key>
-      <value>1</value>
+      <value>0.9</value>
     </param>
     <param>
       <key>id</key>
@@ -144,7 +144,7 @@
     </param>
     <param>
       <key>lo</key>
-      <value>0</value>
+      <value>-0.9</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -153,53 +153,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_simple_squelch_cc</key>
-    <param>
-      <key>alpha</key>
-      <value>0.001</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(760, 285)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>analog_simple_squelch_cc_1</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>threshold</key>
-      <value>-25</value>
     </param>
   </block>
   <block>
@@ -316,7 +269,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chris/Desktop/filteredAcarsNew</value>
+      <value>/home/c/Desktop/acarsNew.wav</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1070,7 +1023,7 @@
     </param>
     <param>
       <key>gain_mode0</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>if_gain0</key>
@@ -2464,12 +2417,6 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>analog_simple_squelch_cc_1</source_block_id>
-    <sink_block_id>blocks_complex_to_mag_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_complex_to_mag_0</source_block_id>
     <sink_block_id>rational_resampler_xxx_1</sink_block_id>
     <source_key>0</source_key>
@@ -2489,7 +2436,7 @@
   </connection>
   <connection>
     <source_block_id>rational_resampler_xxx_0</source_block_id>
-    <sink_block_id>analog_simple_squelch_cc_1</sink_block_id>
+    <sink_block_id>blocks_complex_to_mag_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

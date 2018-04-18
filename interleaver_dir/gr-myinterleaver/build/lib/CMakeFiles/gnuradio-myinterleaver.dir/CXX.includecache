@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/myinterleaver/api.h
+gnuradio/attributes.h
+-
+
+../include/myinterleaver/interleaver.h
+myinterleaver/api.h
+-
+gnuradio/block.h
+-
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/lib/interleaver_impl.cc
+config.h
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/lib/config.h
+gnuradio/io_signature.h
+-
+interleaver_impl.h
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/lib/interleaver_impl.h
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/lib/interleaver_impl.h
+myinterleaver/interleaver.h
+-
+
