@@ -24,25 +24,14 @@ public:
 		const int *out = (const int *) output_items[0];
 
 		for (int i=0; i < noutput_items, i += 2) {
-			out[i] = 0
-			int mask = 1
-
-			for (int j=0; j < sizeof(int)*4; j++) {
-				next = (in1[i] & mask) | (in2[i] & mask) << 1
-				out[i] |= next << (j*2)
-				mask = mask << 1
-			}
-
-			mask = 1
-			for (int j=sizeof(int)*4; j < sizeof(int)*8; j++) {
-				next = (in1[i+1] & mask) | (in2[i+1] & mask) << 1
-				out[i+1] |= next << (j*2)
-				mask = mask << 1
+			out[i] = in1[i/2]
+			if (i+1 < noutput_items) {
+				out[i+1] = in2[i/2]
 			}
 		}
 
-		consume_each(0, noutput_items);
-		consume_each(1, noutput_items);
+		consume_each(0, noutput_items/2);
+		consume_each(1, noutput_items/2);
 		return noutput_items;
 	}
 }
