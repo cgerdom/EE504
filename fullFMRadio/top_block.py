@@ -32,7 +32,7 @@ import wx
 
 class top_block(grc_wxgui.top_block_gui):
 
-    def __init__(self):
+    def __init__(self, station):
         grc_wxgui.top_block_gui.__init__(self, title="Top Block")
         _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
         self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
@@ -47,7 +47,7 @@ class top_block(grc_wxgui.top_block_gui):
         ##################################################
         self.rtlsdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
         self.rtlsdr_source_0.set_sample_rate(samp_rate)
-        self.rtlsdr_source_0.set_center_freq(92.1e6, 0)
+        self.rtlsdr_source_0.set_center_freq(station*1e6, 0)
         self.rtlsdr_source_0.set_freq_corr(0, 0)
         self.rtlsdr_source_0.set_dc_offset_mode(0, 0)
         self.rtlsdr_source_0.set_iq_balance_mode(0, 0)
@@ -89,12 +89,13 @@ class top_block(grc_wxgui.top_block_gui):
         self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
 
 
-def main(top_block_cls=top_block, options=None):
+def main(station, top_block_cls=top_block, options=None):
 
-    tb = top_block_cls()
+    tb = top_block_cls(station)
     tb.Start(True)
     tb.Wait()
 
 
 if __name__ == '__main__':
-    main()
+    station = argv[1]
+    main(station)
