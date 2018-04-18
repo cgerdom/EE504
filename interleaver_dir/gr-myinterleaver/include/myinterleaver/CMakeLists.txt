@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    interleaver.h DESTINATION include/myinterleaver
+    interleaver.h
+    deinterleaver.h DESTINATION include/myinterleaver
 )

@@ -26,11 +26,13 @@
  */
 
 #include "qa_myinterleaver.h"
+#include "qa_deinterleaver.h"
 
 CppUnit::TestSuite *
 qa_myinterleaver::suite()
 {
   CppUnit::TestSuite *s = new CppUnit::TestSuite("myinterleaver");
+  s->addTest(gr::myinterleaver::qa_deinterleaver::suite());
 
   return s;
 }

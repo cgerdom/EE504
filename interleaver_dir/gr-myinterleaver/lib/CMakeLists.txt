@@ -27,6 +27,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND myinterleaver_sources
     interleaver_impl.cc
+    deinterleaver_impl.cc
 )
 
 set(myinterleaver_sources "${myinterleaver_sources}" PARENT_SCOPE)
@@ -64,6 +65,7 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 list(APPEND test_myinterleaver_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_myinterleaver.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_myinterleaver.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/qa_deinterleaver.cc
 )
 
 add_executable(test-myinterleaver ${test_myinterleaver_sources})
