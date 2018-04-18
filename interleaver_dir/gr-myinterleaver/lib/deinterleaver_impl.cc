@@ -40,8 +40,8 @@ namespace gr {
      */
     deinterleaver_impl::deinterleaver_impl()
       : gr::block("deinterleaver",
-              gr::io_signature::make(1, 1, sizeof(int)),
-              gr::io_signature::make(2, 2, sizeof(int)))
+              gr::io_signature::make(1, 1, sizeof(float)),
+              gr::io_signature::make(2, 2, sizeof(float)))
     {}
 
     /*
@@ -63,9 +63,9 @@ namespace gr {
                        gr_vector_const_void_star &input_items,
                        gr_vector_void_star &output_items)
     {
-      const int *in = (const int *) input_items[0];
-      int *out1 = (int *) output_items[0];
-      int *out2 = (int *) output_items[1];
+      const float *in = (const float *) input_items[0];
+      float *out1 = (float *) output_items[0];
+      float *out2 = (float *) output_items[1];
 
       for (int i=0; i < noutput_items; i += 2) {
         out1[i/2] = in[i];

@@ -32,9 +32,9 @@ class qa_interleaver (gr_unittest.TestCase):
         self.tb = None
 
     def test_001_t (self):
-		src_data1 = (1, 2, 3, 4, 5, 6, 7)
-		src_data2 = (8, 9, 10, 11, 12, 13, 14)
-		expected_result = (1, 8, 2, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 14)
+		src_data1 = (1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)
+		src_data2 = (8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0)
+		expected_result = (1.0, 8.0, 2.0, 9.0, 3.0, 10.0, 4.0, 11.0, 5.0, 12.0, 6.0, 13.0, 7.0, 14.0)
 
 		src1 = blocks.vector_source_f(src_data1)
 		src2 = blocks.vector_source_f(src_data2)
