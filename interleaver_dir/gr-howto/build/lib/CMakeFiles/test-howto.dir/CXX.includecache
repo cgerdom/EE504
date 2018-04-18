@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/qa_howto.cc
+qa_howto.h
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/qa_howto.h
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/qa_howto.h
+gnuradio/attributes.h
+-
+cppunit/TestSuite.h
+-
+
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/test_howto.cc
+config.h
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/config.h
+cppunit/TextTestRunner.h
+-
+cppunit/XmlOutputter.h
+-
+gnuradio/unittests.h
+-
+qa_howto.h
+/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/lib/qa_howto.h
+iostream
+-
+fstream
+-
+

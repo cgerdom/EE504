@@ -43,9 +43,9 @@ class qa_interleaver (gr_unittest.TestCase):
 		self.tb.connect(src2, (inter, 1))
 		self.tb.connect(inter, dst)
 		self.tb.run()
-
 		result_data = dst.data()
-		self.assertEqual(expected_result, result_data)
+		print result_data
+		self.assertFloatTuplesAlmostEqual(expected_result, result_data, 6)
 		"""
 		src1 = blocks.vector_source_f(src_data1)
 		src2 = blocks.vector_source_f(src_data2)
@@ -62,8 +62,8 @@ class qa_interleaver (gr_unittest.TestCase):
 
 		result_data1, result_data2 = dst.data()
 		print_result_list(result_data)
-		self.assertEqual(src_data1, result_data1)
-		self.assertEqual(src_data2, result_data2)
+		self.assertFloatTuplesAlmostEqual(src_data1, result_data1, 6)
+		self.assertFloatTuplesAlmostEqual(src_data2, result_data2, 6)
 		"""
 
 if __name__ == '__main__':

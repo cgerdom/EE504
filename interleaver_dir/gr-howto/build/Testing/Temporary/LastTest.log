@@ -1,0 +1,40 @@
+Start testing: Apr 18 14:50 PDT
+----------------------------------------------------------
+1/2 Testing: test_howto
+1/2 Test: test_howto
+Command: "/bin/sh" "/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/build/lib/test_howto_test.sh"
+Directory: /home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/build/lib
+"test_howto" start time: Apr 18 14:50 PDT
+Output:
+----------------------------------------------------------
+
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_howto" end time: Apr 18 14:50 PDT
+"test_howto" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: qa_square_ff
+2/2 Test: qa_square_ff
+Command: "/bin/sh" "/home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/build/python/qa_square_ff_test.sh"
+Directory: /home/c/Documents/EE504/EE504/interleaver_dir/gr-howto/build/python
+"qa_square_ff" start time: Apr 18 14:50 PDT
+Output:
+----------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"qa_square_ff" end time: Apr 18 14:50 PDT
+"qa_square_ff" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 18 14:50 PDT

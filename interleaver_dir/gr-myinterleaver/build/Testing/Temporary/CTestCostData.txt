@@ -1,4 +1,4 @@
-test_myinterleaver 3 0.00141104
+test_myinterleaver 17 0.000871939
 qa_interleaver 0 0
 ---
 qa_interleaver

@@ -55,8 +55,8 @@ namespace gr {
     interleaver_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-      	ninput_items_required[1] = noutput_items/2;
-	ninput_items_required[0] = noutput_items/2;
+	ninput_items_required[0] = (noutput_items);
+	ninput_items_required[1] = (noutput_items);
     }
 
     int
@@ -79,7 +79,8 @@ namespace gr {
       // Do <+signal processing+>
       // Tell runtime system how many input items we consumed on
       // each input stream.
-      consume_each (noutput_items/2);
+      //consume_each (noutput_items/2);
+      consume_each (2*noutput_items);
 
       // Tell runtime system how many output items we produced.
       return noutput_items;
