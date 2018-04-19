@@ -20,7 +20,7 @@
 # 
 
 from gnuradio import gr, gr_unittest
-from gnuradio import blocks, atsc
+from gnuradio import blocks
 import myinterleaver_swig as myinterleaver
 import matplotlib.pyplot as plt
 
@@ -77,7 +77,7 @@ class qa_interleaver (gr_unittest.TestCase):
 		plt.plot(range(0, len(src_data1)*2, 2), list(src_data1), 'r',
 				 range(1, len(src_data2)*2+1, 2), list(src_data2), 'b',
 				 range(len(result_data)), list(result_data), 'g')
-		plt.show()
+		plt.draw()
 
 	def visualize_deinterleave(src_data1, src_data2, result_data1, result_data2):
 		plt.subplot(424)
