@@ -27,10 +27,10 @@ def remove_silence(sound, silence_threshold=-20.0, chunk_size=100):
     return short_sound
 
 
-sound_in = AudioSegment.from_file("acarsTest.wav", format="wav")
+sound_in = AudioSegment.from_file("acarsNew.wav", format="wav")
 
 new_sound = remove_silence(sound_in)
 
-file_handle = new_sound.export("acarsShort.wav", format="wav")
+file_handle = new_sound.export("acarsShort1347.wav", format="wav")
 
 file_handle2 = sound_in.export("test.wav", format="wav")
