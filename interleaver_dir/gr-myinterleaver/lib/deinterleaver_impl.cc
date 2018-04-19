@@ -54,7 +54,7 @@ namespace gr {
     void
     deinterleaver_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
-      ninput_items_required[0] = noutput_items*2;
+      ninput_items_required[0] = noutput_items;
     }
 
     int
@@ -74,7 +74,7 @@ namespace gr {
         }
       }
 
-      consume_each(noutput_items*2);
+      consume_each(noutput_items);
       return noutput_items;
     }
 

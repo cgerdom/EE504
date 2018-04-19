@@ -1,0 +1,18 @@
+<testsuite errors="0" failures="1" name="unittest.suite.TestSuite" tests="1" time="0.006">
+  <testcase classname="__main__.qa_interleaver" name="test_001_t" time="0.0062">
+    <failure type="exceptions.AssertionError">8 != 16
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/home/c/Documents/EE504/EE504/interleaver_dir/gr-myinterleaver/python/qa_interleaver.py", line 64, in test_001_t
+    self.assertFloatTuplesAlmostEqual(src_data1, result_data1, 4)
+  File "/usr/lib/python2.7/dist-packages/gnuradio/gr_unittest.py", line 88, in assertFloatTuplesAlmostEqual
+    self.assertEqual (len(a), len(b))
+  File "/usr/lib/python2.7/unittest/case.py", line 513, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python2.7/unittest/case.py", line 506, in _baseAssertEqual
+    raise self.failureException(msg)
+    </failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

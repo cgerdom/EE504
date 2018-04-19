@@ -51,12 +51,22 @@ namespace gr {
     {
     }
 
+/*
+    int interleave_impl::fixed_rate_ninput_to_noutput(int ninput) {
+       return ninput * 2;
+    }
+
+    int interleave_impl::fixed_rate_noutput_to_ninput(int noutput) {
+       return (int) ((noutput/2) + 0.5);
+    }
+*/
+
     void
     interleaver_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-	ninput_items_required[0] = (noutput_items);
-	ninput_items_required[1] = (noutput_items);
+	ninput_items_required[0] = (noutput_items/2) + (noutput_items % 2);
+	ninput_items_required[1] = (noutput_items/2) + (noutput_items % 2);
     }
 
     int
@@ -80,7 +90,7 @@ namespace gr {
       // Tell runtime system how many input items we consumed on
       // each input stream.
       //consume_each (noutput_items/2);
-      consume_each (2*noutput_items);
+      consume_each (noutput_items/2);
 
       // Tell runtime system how many output items we produced.
       return noutput_items;
