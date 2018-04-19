@@ -67,25 +67,32 @@ class qa_interleaver (gr_unittest.TestCase):
 		self.assertFloatTuplesAlmostEqual(src_data2, result_data2, 4)
 		visualize_deinterleave(src_data1,src_data2,result_data1,result_data2)
 
-	def visualize_src(src_data, num):
-		plt.subplot(num)
-		plt.plot(range(len(src_data)), list(src_data), 'r')
-		plt.draw()
+def visualize_src(src_data, num):
+	plt.subplot(num)
+	plt.plot(range(len(src_data)), list(src_data), 'r')
+	plot.title('Src Data' + str(num))
+	plt.legend(loc="lower right", prop={'size': 6})
+	plt.draw()
 
-	def visualize_interleave(src_data1, src_data2, result_data):
-		plt.subplot(423)
-		plt.plot(range(0, len(src_data1)*2, 2), list(src_data1), 'r',
-				 range(1, len(src_data2)*2+1, 2), list(src_data2), 'b',
-				 range(len(result_data)), list(result_data), 'g')
-		plt.draw()
+def visualize_interleave(src_data1, src_data2, result_data):
+	plt.subplot(423)
+	plt.plot(range(0, len(src_data1)*2, 2), list(src_data1), 'r--', label='Src1')
+	plt.plot(range(1, len(src_data2)*2+1, 2), list(src_data2), 'b--', label='Src2')
+	plt.plot(range(len(result_data)), list(result_data), 'g', label='Interleaved')
+	plt.title('Interleaved Data')
+	plt.legend(loc="lower right", prop={'size': 6})
+	plt.draw()
 
-	def visualize_deinterleave(src_data1, src_data2, result_data1, result_data2):
-		plt.subplot(424)
-		plt.plot(range(len(src_data1)), list(src_data1), 'r',
-				 range(len(src_data2)), list(src_data2), 'b',
-				 range(1, len(result_data1)+1), list(result_data1), 'r',
-				 range(1, len(result_data2)+1), list(result_data2), 'b',)
-		plt.show()
+def visualize_deinterleave(src_data1, src_data2, result_data1, result_data2):
+	plt.subplot(424)
+	plt.plot(range(len(src_data1)), list(src_data1), 'r', label='Src1')
+	plt.plot(range(len(src_data2)), list(src_data2), 'b', label='Src2')
+	plt.plot(range(1, len(result_data1)+1), list(result_data1), 'r--', label='Deinter1')
+	plt.plot(range(1, len(result_data2)+1), list(result_data2), 'b--', label='Deinter2')
+	plt.title('Deinterleaved Data')
+	plt.legend(loc="lower right", prop={'size': 6})
+	plt.tight_layout()
+	plt.show()
 
 if __name__ == '__main__':
     gr_unittest.run(qa_interleaver, "qa_interleaver.xml")
